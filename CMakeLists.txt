@@ -20,9 +20,9 @@ install(DIRECTORY models worlds
   DESTINATION share/${PROJECT_NAME}/
 )
 
-install(DIRECTORY include/
-  DESTINATION include/
-)
+# install(DIRECTORY include/
+#   DESTINATION include/
+# )
 
 
 ament_package()
