@@ -5,8 +5,8 @@
     <include>
         <uri>https://fuel.ignitionrobotics.org/1.0/OpenRobotics/models/X1 UGV</uri>
         <plugin
-            filename="ignition-gazebo-diff-drive-system"
-            name="ignition::gazebo::systems::DiffDrive">
+            filename="gz-sim-diff-drive-system"
+            name="gz::sim::systems::DiffDrive">
             <left_joint>front_left_wheel_joint</left_joint>
             <left_joint>rear_left_wheel_joint</left_joint>
             <right_joint>front_right_wheel_joint</right_joint>
@@ -19,8 +19,8 @@
             <max_acceleration>3</max_acceleration>
         </plugin>
         <!-- Publish robot state information -->
-        <plugin filename="libignition-gazebo-pose-publisher-system.so"
-            name="ignition::gazebo::systems::PosePublisher">
+        <plugin filename="libgz-sim-pose-publisher-system.so"
+            name="gz::sim::systems::PosePublisher">
             <publish_link_pose>true</publish_link_pose>
             <publish_sensor_pose>true</publish_sensor_pose>
             <publish_collision_pose>false</publish_collision_pose>
@@ -31,8 +31,8 @@
             <static_update_frequency>1</static_update_frequency>
         </plugin>
         {# <plugin
-            filename="ignition-gazebo-odometry-publisher-system"
-            name="ignition::gazebo::systems::OdometryPublisher">
+            filename="gz-sim-odometry-publisher-system"
+            name="gz::sim::systems::OdometryPublisher">
             <odom_publish_frequency>50</odom_publish_frequency>
             <odom_topic>/model/{{ namespace }}/odom</odom_topic>
             <odom_frame>odomCustom</odom_frame>
